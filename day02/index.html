@@ -33,30 +33,22 @@
 
 </div>
 <script>
-    let  isAnimating = false;
-     document.getElementById('lines').addEventListener('click', function (){
-         const lines1 = document.getElementById('lines-1');
-         const lines2 = document.getElementById('lines-2');
-         const lines3 = document.getElementById('lines-3');
-         if (!isAnimating){
-             lines1.classList.remove("animate-line-1-rev")
-             lines2.classList.remove("animate-line-2-rev")
-             lines3.classList.remove("animate-line-3-rev")
-             lines1.classList.add("animate-line-1")
-             lines2.classList.add("animate-line-2")
-             lines3.classList.add("animate-line-3")
-             isAnimating=true;
-         }else {
-             lines1.classList.remove("animate-line-1")
-             lines2.classList.remove("animate-line-2")
-             lines3.classList.remove("animate-line-3")
-             lines1.classList.add("animate-line-1-rev")
-             lines2.classList.add("animate-line-2-rev")
-             lines3.classList.add("animate-line-3-rev")
-             isAnimating=false;
-         }
-     })
+    let isAnimating = false;
+    const lineIds = ['lines-1', 'lines-2', 'lines-3'];
 
+    document.getElementById('lines').addEventListener('click', function () {
+        lineIds.forEach(id => {
+            const line = document.getElementById(id);
+            if (!isAnimating) {
+                line.classList.remove(`${id}-rev`);
+                line.classList.add(`${id}`);
+            } else {
+                line.classList.remove(`${id}`);
+                line.classList.add(`${id}-rev`);
+            }
+        });
+        isAnimating = !isAnimating;
+    });
 
 </script>
 </body>
