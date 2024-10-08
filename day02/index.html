@@ -39,6 +39,9 @@
          const lines2 = document.getElementById('lines-2');
          const lines3 = document.getElementById('lines-3');
          if (!isAnimating){
+             lines1.classList.remove("animate-line-1-rev")
+             lines2.classList.remove("animate-line-2-rev")
+             lines3.classList.remove("animate-line-3-rev")
              lines1.classList.add("animate-line-1")
              lines2.classList.add("animate-line-2")
              lines3.classList.add("animate-line-3")
@@ -50,6 +53,7 @@
              lines1.classList.add("animate-line-1-rev")
              lines2.classList.add("animate-line-2-rev")
              lines3.classList.add("animate-line-3-rev")
+             isAnimating=false;
          }
      })
 
