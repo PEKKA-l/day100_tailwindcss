@@ -7,15 +7,25 @@
 </head>
 <body>
 <div class="flex flex-col justify-center items-center  min-h-screen ">
-        <div class="bg-[#272c34] w-48 h-48   flex justify-center items-center relative  ">
+        <div class="bg-[#272c34] w-48 h-48   flex justify-center items-center relative overflow-hidden  ">
 
-            <div class="  flex-col flex w-20 h-20   rounded-full  overflow-hidden relative animate-sun-goes-down" >
-                <div class="   w-4 h-4   absolute animate-sun-goes ">
+            <div class="  flex-col flex w-20 h-20   rounded-full  overflow-hidden  relative  " >
+<!--             overflow-hidden   animate-sun-goes-down-->
+                <div class="   w-4 h-4    absolute  animate-sun-goes">
+<!--                    animate-sun-goes-->
                     <div class="bg-[#FFEF00] rounded-full w-full h-full">
                     </div>
                 </div>
-                <div class="bg-[#7DDFFC] w-full h-14 flex justify-center    ">
+                <div class="bg-[#7DDFFC] w-full h-14 flex justify-center  items-end  ">
 
+                    <!-- 第一个部分 -->
+                    <div class="w-12 h-6  absolute z-1 [clip-path:polygon(50%_0%,0%_100%,100%_100%)] animate-change-color-first">
+                    </div>
+
+                    <!-- 第二个部分 -->
+                    <div class="w-6 h-6  absolute z-2 ml-3 left-1/2  -translate-x-1/2
+                     [clip-path:polygon(0%_0%,100%_100%,35%_100%)] animate-change-color-last">
+                    </div>
                 </div>
 
                 <div class="bg-[#F0DE75] w-full h-6   ">

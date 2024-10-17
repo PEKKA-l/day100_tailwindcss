@@ -14,7 +14,9 @@ module.exports = {
         'line-2-rev': 'animate-line-2-rev 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards',
         'line-3-rev': 'animate-line-3-rev 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards',
         'sun-goes-down': 'sun-goes-down 4s infinite',
-        'sun-goes':  'sun-goes 4s infinite '
+        'sun-goes':  'sun-goes 4s infinite ',
+        'change-color-first':'change-color-first 4s infinite',
+        'change-color-last':'change-color-last 4s infinite'
       },
       keyframes:{
         'line-1': {
@@ -60,6 +62,14 @@ module.exports = {
           '100%':{
             transform: 'translate(450%, 230%) rotate(0deg)'
           },
+        },
+        'change-color-first':{
+          '0%': { backgroundColor: 'white' },
+          '100%': { backgroundColor: 'grey' },
+        },
+        'change-color-last':{
+          '0%': { backgroundColor: 'grey' },
+          '100%': { backgroundColor: 'white' },
         }
       }
     },
